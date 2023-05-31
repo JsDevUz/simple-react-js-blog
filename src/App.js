@@ -27,7 +27,7 @@ function App() {
         }
     }, [search, posts])
     const handleDelete = (id) => {
-        const newPost = posts.filter(p => p.id != id)
+        const newPost = posts.filter(p => p.id.toString() !== id.toString())
         setPosts([...newPost])
         history('/')
     }

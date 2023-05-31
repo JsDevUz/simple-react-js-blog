@@ -1,13 +1,140 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+ul {
+  text-decoration: none !important;
+  display: flex;
+  padding: 0;
+}
+li {
+  text-decoration: none !important;
+  padding: 0;
+  padding: 5px;
+  color: #fff;
+  cursor: pointer;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+.head {
+  height: 40px;
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 0 0 0 20px;
+}
+.nav {
+  background-color: black;
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 0 0 10px;
+}
+
+.nav li:hover {
+  background-color: #fff;
+  color: #000;
+}
+.nav input {
+  height: 25px;
+  width: 70%;
+  border-radius: 10px;
+  border: none;
+  padding: 5px 10px;
+  outline: none;
+}
+.about {
+  padding: 10px;
+}
+.newPost {
+  padding: 0 10px 0 10px;
+}
+.newPost input {
+  min-height: 35px;
+  width: auto;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  outline: none;
+}
+.newPost textarea {
+  min-height: 100px;
+  width: auto;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  outline: none;
+}
+.newPost button {
+  border: none;
+  background-color: aquamarine;
+  font-size: 17px;
+  border-radius: 10px;
+  height: 35px;
+  max-width: 100px;
+}
+
+.feeds {
+  overflow-y: auto;
+  max-height: calc(100vh - 186px);
+  padding: 0 0 2px 0;
+}
+.onePost {
+  padding: 10px 0 0 10px;
+}
+.onePost button {
+  border: none;
+  background-color: red;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 10px;
+  height: 35px;
+  padding: 0 10px;
+}
+.postRow {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0 0 10px;
+}
+.postTitle {
+  margin: 0 0 0px 0;
+}
+.postDate {
+  font-size: 14px;
+  margin: 5px 0 0 0;
+}
+.addPost {
+  display: flex;
+  flex-direction: column;
+}
+.addPost textarea {
+  margin: 10px 0;
+}
+
+.footer {
+  height: 40px;
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

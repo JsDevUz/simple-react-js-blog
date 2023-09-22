@@ -9,6 +9,8 @@ function App() {
     const history = useNavigate()
     const [search, setSearch] = useState('')
     const [postTitle, setPostTitle] = useState('')
+        const [editTitle, setEditTitle] = useState('')
+    const [editBody, setEditBody] = useState('')
     const [postBody, setPostBody] = useState('')
     const [searchResult, setSearchResult] = useState([])
     const [posts, setPosts] = useState([{
@@ -31,7 +33,25 @@ function App() {
         setPosts([...newPost])
         history('/')
     }
+const handleEdit = async (id) => {
+        try {
+            if (editTitle.length <= 0 || editBody.length <= 0) return;
 
+            const editPost = {
+                id: id,
+                title: editTitle,
+                body: editBody,
+                dateTime: format(new Date(), 'MMMM dd, yyyy pp')
+            }
+            
+            setPosts(p => p.map(po => po.id == id ? { ...editPost } : po))
+            setEditBody('')
+            setEditTitle('')
+            history('/')
+        } catch (e) {
+            console.log(e);
+        }
+    }
     const addPost = (e) => {
         e.preventDefault()
 
@@ -55,7 +75,7 @@ function App() {
                 <Header />
                 <Nav search={search} setSearch={setSearch} />
                 <div className='body'>
-                    <Routers handleDelete={handleDelete} addPost={addPost} postBody={postBody} setPostBody={setPostBody} postTitle={postTitle} setPostTitle={setPostTitle} posts={searchResult} />
+                    <Routers editTitle={editTitle} editBody={editBody} setEditTitle={setEditTitle}   handleEdit={handleEdit}  setEditBody={setEditBody} handleDelete={handleDelete} addPost={addPost} postBody={postBody} setPostBody={setPostBody} postTitle={postTitle} setPostTitle={setPostTitle} posts={searchResult} />
                 </div>
             </div>
             <Footer />

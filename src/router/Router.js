@@ -4,6 +4,7 @@ import Home from '../pages/HomePage'
 import Missing from '../pages/MissingPage'
 import NewPost from '../pages/NewPostPage'
 import PostPage from '../pages/PostPage'
+import EditPost from '../pages/editPost'
 import About from '../pages/AboutPage'
 function Routers({  handleEdit, editBody, editTitle, setEditBody, setEditTitle, handleDelete, posts, addPost, postTitle, postBody, setPostTitle, setPostBody }) {
     return (

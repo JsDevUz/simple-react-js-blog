@@ -39,9 +39,10 @@ a {
   background-color: aqua;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   font-weight: 700;
   font-size: 20px;
-  padding: 0 0 0 20px;
+  padding: 0 10px 0 20px;
 }
 .nav {
   background-color: black;
@@ -63,6 +64,11 @@ a {
   border: none;
   padding: 5px 10px;
   outline: none;
+}
+.nav form{
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 .about {
   padding: 10px;
@@ -95,6 +101,33 @@ a {
   max-width: 100px;
 }
 
+.editPost {
+  padding: 0 10px 0 10px;
+}
+.editPost input {
+  min-height: 35px;
+  width: auto;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  outline: none;
+}
+.editPost textarea {
+  min-height: 100px;
+  width: auto;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  outline: none;
+}
+.editPost button {
+  border: none;
+  background-color: aquamarine;
+  font-size: 17px;
+  border-radius: 10px;
+  height: 35px;
+  max-width: 100px;
+}
 .feeds {
   overflow-y: auto;
   max-height: calc(100vh - 186px);
@@ -111,6 +144,17 @@ a {
   border-radius: 10px;
   height: 35px;
   padding: 0 10px;
+  margin: 0 10px 0 0;
+}
+.onePost button:first-child {
+  border: none;
+  background-color: black;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 10px;
+  height: 35px;
+  padding: 0 10px;
+  margin: 0 10px 0 0;
 }
 .postRow {
   border-bottom: 1px solid #ccc;
@@ -134,6 +178,20 @@ a {
 .footer {
   height: 40px;
   background-color: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.error-message {
+  color: red;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loading {
+  color: green;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;

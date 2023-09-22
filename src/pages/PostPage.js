@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 function PostPage({ posts, handleDelete }) {
     const { id } = useParams()
